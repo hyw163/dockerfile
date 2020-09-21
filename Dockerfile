@@ -26,8 +26,6 @@ apt-get install -y --no-install-recommends \
     pecl install mcrypt-1.0.3 && \
     docker-php-ext-enable bcmath zip pdo_mysql mcrypt sockets
 
-
-
 # install memcached
 RUN pecl install memcached
 
