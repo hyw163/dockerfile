@@ -8,7 +8,7 @@ apt-get upgrade && \
 apt-get install -y --no-install-recommends \
     curl \
     git \
-    mariadb-client \
+    mysql-client \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
