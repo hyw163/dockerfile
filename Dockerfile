@@ -4,11 +4,12 @@ RUN apt-get clean -y
 # Install the PHP extensions we need
 
 RUN apt-get update && \
+apt-get autoremove && \
 apt-get upgrade && \
 apt-get install -y --no-install-recommends \
     curl \
     git \
-    mysql-client-5.7 \
+    mariadb-client \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
