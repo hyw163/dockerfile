@@ -6,7 +6,7 @@ apt-get update && \
 apt-get install -y --no-install-recommends \
     curl \
     git \
-    mariadb-client \
+    mysqlclient-dev \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
