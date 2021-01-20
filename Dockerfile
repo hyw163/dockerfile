@@ -3,10 +3,9 @@ FROM php:7.3-fpm
 # Install the PHP extensions we need
 RUN apt-get clean -y &&\
 apt-get update && \
-apt-get install -y \
+apt-get install -y --no-install-recommends \
     curl \
     git \
-    mysql-client \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
@@ -23,6 +22,8 @@ apt-get install -y \
     docker-php-ext-install gd pdo_mysql mysqli opcache intl bcmath zip sockets && \
     pecl install mcrypt-1.0.3 && \
     docker-php-ext-enable bcmath zip pdo_mysql mcrypt sockets
+
+RUN pip install mysqlclient
 
 # install memcached, xdebug, redis
 RUN pecl install memcached xdebug redis
