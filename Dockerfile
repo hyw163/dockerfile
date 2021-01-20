@@ -6,6 +6,7 @@ apt-get update && \
 apt-get install -y --no-install-recommends \
     curl \
     git \
+    mariadb-client-10.3 \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
@@ -22,8 +23,6 @@ apt-get install -y --no-install-recommends \
     docker-php-ext-install gd pdo_mysql mysqli opcache intl bcmath zip sockets && \
     pecl install mcrypt-1.0.3 && \
     docker-php-ext-enable bcmath zip pdo_mysql mcrypt sockets
-
-RUN pip install mysqlclient
 
 # install memcached, xdebug, redis
 RUN pecl install memcached xdebug redis
