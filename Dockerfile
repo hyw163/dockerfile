@@ -6,7 +6,7 @@ apt-get update && \
 apt-get install -y --no-install-recommends \
     curl \
     git \
-    mysqlclient-dev \
+    mysql-client \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
