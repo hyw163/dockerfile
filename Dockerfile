@@ -3,11 +3,10 @@ FROM php:7.3-fpm
 # Install the PHP extensions we need
 RUN apt-get clean -y &&\
 apt-get update && \
-apt-get install -y --no-install-recommends \
+apt-get install -y \
     curl \
     git \
-    mysqlclient-dev \
-    libmysqlclient-dev \
+    mysql-client \
     libmemcached-dev \
     libz-dev \
     libzip-dev \
